@@ -1,0 +1,163 @@
+{
+  "compile_memory_path": "skills/.evidence/memory.md",
+  "compiled_package_id": "calculix",
+  "evidence": {
+    "core_skills": [
+      "calculix-general"
+    ],
+    "evidence_dir": "skills/.evidence",
+    "files": [
+      "skills/.evidence/calculix-general.md"
+    ]
+  },
+  "generation": {
+    "docs_only": false,
+    "generator_script": "sci-skills-generator/scripts/generate_skills_folder.py",
+    "max_skills": 30,
+    "return_code": 0,
+    "status": "ok"
+  },
+  "mode": "compile",
+  "pass_scope_diffs": {
+    "pass_2": {
+      "added": [],
+      "changed": [
+        "skills/calculix-general/SKILL.md",
+        "skills/calculix-general/references/doc_map.md",
+        "skills/calculix-general/references/source_map.md",
+        "skills/calculix-index/SKILL.md"
+      ],
+      "deleted": [],
+      "modified": [
+        "skills/calculix-general/SKILL.md",
+        "skills/calculix-general/references/doc_map.md",
+        "skills/calculix-general/references/source_map.md",
+        "skills/calculix-index/SKILL.md"
+      ]
+    },
+    "pass_3": {
+      "added": [
+        "skills/.compile_report.json",
+        "skills/.evidence/memory.md",
+        "skills/calculix-general/scripts/smoke_run.sh"
+      ],
+      "changed": [
+        "skills/.compile_report.json",
+        "skills/.evidence/memory.md",
+        "skills/calculix-general/SKILL.md",
+        "skills/calculix-general/references/doc_map.md",
+        "skills/calculix-general/references/source_map.md",
+        "skills/calculix-general/scripts/smoke_run.sh",
+        "skills/calculix-index/SKILL.md"
+      ],
+      "deleted": [],
+      "modified": [
+        "skills/calculix-general/SKILL.md",
+        "skills/calculix-general/references/doc_map.md",
+        "skills/calculix-general/references/source_map.md",
+        "skills/calculix-index/SKILL.md"
+      ]
+    }
+  },
+  "passes": [
+    {
+      "pass": 1,
+      "return_code": 0,
+      "status": "ok"
+    },
+    {
+      "pass": 2,
+      "return_code": 0,
+      "status": "ok"
+    },
+    {
+      "pass": 3,
+      "return_code": 0,
+      "status": "ok"
+    }
+  ],
+  "profile": {
+    "docs_dirs": [
+      "doc"
+    ],
+    "docs_only": false,
+    "notes": [
+      "Primary formal documentation is the LaTeX manual at doc/CalculiX.tex.",
+      "test/ contains .inp decks and reference outputs used for both regression checking and runnable examples.",
+      "Generator setup patched for deterministic execution: fixed f-string syntax and added .tex doc discovery."
+    ],
+    "package_name": "calculix",
+    "profile_path": "skills/.compile_profile.json",
+    "profile_source": "file",
+    "source_dirs": [
+      "src"
+    ],
+    "test_dirs": [
+      "test"
+    ],
+    "tutorial_dirs": [
+      "test"
+    ],
+    "warnings": []
+  },
+  "project_root": "/mnt/home/taoeli/fermilink_repos/.fermilink-auto-compile/calculix-calculix",
+  "run_id": "compile_20260305T021029015814Z",
+  "skill_plan": {
+    "available_skill_ids": [
+      "calculix-general",
+      "calculix-index"
+    ],
+    "core_skill_ids": [
+      "calculix-general"
+    ],
+    "deferred_gaps": [
+      "Manual content is concentrated in a single TeX file; section-aware extraction is limited in current generator output.",
+      "No dedicated tutorials/examples directory exists; examples are primarily embedded in test/ input decks.",
+      "Pass 3 should reassess whether topic consolidation or manual skill splitting is needed beyond the generator's single-topic baseline."
+    ],
+    "goal": "Generate and then enrich a compact, docs-first CalculiX skill set grounded in the manual, test decks, and solver source.",
+    "mode": "compile",
+    "priority_skills": [
+      {
+        "action": "create",
+        "must_cover": [
+          "Routing by user intent: install/build, input modeling, run/validate, post-processing, troubleshooting",
+          "Explicit docs-first escalation order from doc -> test decks -> source"
+        ],
+        "reason": "Establish the primary router so all follow-up requests are directed to focused skills instead of ad hoc broad answers.",
+        "skill_id": "calculix-index",
+        "source_hints": [
+          "doc/CalculiX.tex",
+          "test/README",
+          "src/CalculiX.c"
+        ]
+      }
+    ],
+    "version": 1,
+    "warnings": []
+  },
+  "skill_plan_path": "skills/.evidence/skill_plan.json",
+  "validation": {
+    "core_skills_checked": [
+      "calculix-general"
+    ],
+    "docs_only": false,
+    "errors": [
+      "/mnt/home/taoeli/fermilink_repos/.fermilink-auto-compile/calculix-calculix/skills/calculix-general/references/source_map.md: broken path references: src/results*.f"
+    ],
+    "index_skills": [
+      "calculix-index"
+    ],
+    "missing_planned_skills": [],
+    "ok": false,
+    "planned_skill_ids": [
+      "calculix-index"
+    ],
+    "previous_source_inventory": {},
+    "skills_total": 2,
+    "source_inventory": {},
+    "source_links_total": 23,
+    "topic_skills": 1,
+    "warnings": []
+  }
+}
